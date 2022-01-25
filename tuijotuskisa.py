@@ -57,13 +57,21 @@ class Peikko:
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
     
 class Sankari:
+    """Luokka, joka kuvaa Peikon."""
+    
     RIEMUTAVUT = ("apple", "banana", "cherry" ,"jees", "joo")
+    
     def __init__(self,nimi):
+        """Konstruktori."""
         self.nimi = nimi
         self.rohkeus = random.randint(4, 10)
         self.katseen_voima = random.randint(4, 8)
         
     def arvo_hurraus(self):
+        """Palauttaa satunnaisen hurraushuudahduksen.
+        :return: hurraava huudahdus
+        :rtype: str
+        """
         return random.choice(self.RIEMUTAVUT)
 
 def hurraa(olio):
