@@ -59,6 +59,8 @@ class Peikko:
 class Sankari:
     def __init__(self,nimi):
         self.nimi = nimi
+        self.rohkeus = random.randint(3, 9)
+        self.katseen_voima = random.randint(2, 5)
 ### Kirjoita luokka Sankari tähän.
 
 
