@@ -60,7 +60,7 @@ class Sankari:
     """Luokka, joka kuvaa Sankarin.
     :ivar nimi: Sankarin nimi
     :type nimi: str
-    :ivar rohkeus: sankarin rohkeus, arvotaan
+    :ivar rohkeus: Sankarin rohkeus, arvotaan
     :type rohkeus: int
     :ivar katseen_voima: sankarin katseen voimakkuus, arvotaan
     :type katseen_voima: int
