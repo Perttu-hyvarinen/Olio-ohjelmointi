@@ -57,7 +57,17 @@ class Peikko:
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
     
 class Sankari:
-    """Luokka, joka kuvaa Peikon."""
+    """Luokka, joka kuvaa Sankarin.
+    :ivar nimi: Sankarin nimi
+    :type nimi: str
+    :ivar rohkeus: sankarin rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: sankarin katseen voimakkuus, arvotaan
+    :type katseen_voima: int
+
+    Julkiset metodit
+        arvo_hurraus()
+    """""
     
     RIEMUTAVUT = ("apple", "banana", "cherry" ,"jees", "joo")
     
