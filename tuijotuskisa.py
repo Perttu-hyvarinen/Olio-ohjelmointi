@@ -8,23 +8,6 @@ class Olento:
         self.rohkeus = random.randint(4, 10)
         self.katseen_voima = random.randint(4, 8)
 
-    def arvo_hurraus(self):
-        """Palauttaa satunnaisen hurraushuudahduksen.
-        :return: hurraava huudahdus
-        :rtype: str
-        """
-    
-    def __init__(self,nimi):
-        """Konstruktori."""
-        self.nimi = nimi
-        self.rohkeus = random.randint(4, 10)
-        self.katseen_voima = random.randint(4, 8)
-
-    def arvo_hurraus(self):
-        """Palauttaa satunnaisen hurraushuudahduksen.
-        :return: hurraava huudahdus
-        :rtype: str
-        """
 class Peikko:
     """Luokka, joka kuvaa Peikon.
 
@@ -41,7 +24,8 @@ class Peikko:
 
     NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
-
+    LUOLANIMITAVUT = ("ejs", "joe", "Our", "Dra", "Br", "Dz", "G", "Gr", "ah", "Urh", "a")
+    LUOLATAVUT = ("Ufsr", "Garf", "Graffh", "Gufr", "Kdsan", "Kafdszah", "Bdsfar", "Bfsazh", "Rafsgh", "Rufsdz")
     def __init__(self):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
@@ -78,6 +62,34 @@ class Peikko:
         :rtype: str
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
+
+
+
+class Vuorenpeikko:
+    def __init__(self, koko, sijainti, suunta, nopeus=1.0):
+        self.koko = koko
+        super().__init__(nimi, rohkeus, katseen_voima)
+        
+    def _arvo_sanat(self, tavut, n, erotin, p=0.5):
+    
+        osat = random.choices(tavut, k=random.randint(2, n))
+        sanat = osat[0]
+        for osa in osat[1:]:
+            if random.random() < p:
+                sanat += erotin + osa
+            else:
+                sanat += osa.lower()
+        return sanat
+
+    def arvo_hurraus(self):
+        """Palauttaa satunnaisen hurraushuudahduksen.
+
+        :return: hurraava huudahdus
+        :rtype: str
+        """
+        return self._arvo_sanat(self.LUOLATAVUT, 8, " ", 0.7)
+    
+
     
 class Sankari:
     """Luokka, joka kuvaa Sankarin.
