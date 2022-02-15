@@ -4,9 +4,9 @@ import time
 class Olento:
     """ kanttaluokka luokille Peikko ja Sankari
 
-    :ivar rohkeus: peikon rohkeus, arvotaan
+    :ivar rohkeus: Olenon rohkeus, arvotaan
     :type rohkeus: int
-    :ivar katseen_voima: peikon katseen voimakkuus, arvotaan
+    :ivar katseen_voima: Olenon katseen voimakkuus, arvotaan
     :type katseen_voima: int
 
     """
