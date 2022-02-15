@@ -3,7 +3,11 @@ import time
 
 class Olento:
     def __init__(self):
-        """Konstruktori."""
+        """ kanttaluokka luokille Peikko ja Sankari.
+    :ivar rohkeus: peikon rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: peikon katseen voimakkuus, arvotaan
+    :type katseen_voima: int """
         self.nimi = nimi
         self.rohkeus = random.randint(4, 10)
         self.katseen_voima = random.randint(4, 8)
